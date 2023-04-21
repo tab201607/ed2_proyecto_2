@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <ili9341_8_bits_fast.h>
+#include <string.h>
 
 // Pines usados
 //#define LCD_RST PD_0
@@ -170,8 +171,20 @@ void paintApple() {
 
   coordApple = coord;
   
-  
+  paintScore();
   LCD_Bitmap(coordToLcdX(coord), coordToLcdY(coord), 12, 12, apple);
+  
+}
+
+void paintScore() {
+  int score = snake_length - 3;
+  int hundreds = score/100 % 10;
+  int tens = score/10 % 10;
+  int ones = score % 10;
+  
+  LCD_Sprite(240, 96, 24, 24, numbers, 10, hundreds, 0, 0);
+  LCD_Sprite(264, 96, 24, 24, numbers, 10, tens, 0, 0);
+  LCD_Sprite(288, 96, 24, 24, numbers, 10, ones, 0, 0);
 }
 
 void right() {if ((direction != 2) && (inmove == 0)) 
