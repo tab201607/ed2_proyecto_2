@@ -13,6 +13,7 @@
 // DPINS[] = {PB_0, PB_1, PB_2, PB_3, PB_4, PB_5, PB_6, PB_7};
 
 #include "bitmaps.h"
+//definicion de colores utilizados para pantalla y fotos 
 #define sGREY 0x7BEF
 #define sDARKGREEN 0x0485
 #define sLIGHTGREEN 0x8684
@@ -20,21 +21,12 @@
 
 void setup() {
   Serial.begin(9600);
+  Serial2.begin(9600);
   lcdInit();
 
-  interrupts();
-   pinMode(37, INPUT_PULLUP);//PB2 como input y interrupt
-  attachInterrupt(digitalPinToInterrupt(37), up, RISING);
-  pinMode(36, INPUT_PULLUP);//PB2 como input y interrupt
-  attachInterrupt(digitalPinToInterrupt(36), right, RISING);
-   pinMode(35, INPUT_PULLUP);//PB2 como input y interrupt
-  attachInterrupt(digitalPinToInterrupt(35), left, RISING);
-  pinMode(34, INPUT_PULLUP);//PB2 como input y interrupt
-  attachInterrupt(digitalPinToInterrupt(34), down, RISING);
-  
+  //mainMenu();
   game();
-  
-  //LCD_Bitmap(1,1, 320, 240, game_screen);
+ 
 }
 
 char coordHead; //coordenadas de la cabeza
@@ -43,11 +35,45 @@ char snake_length; //cuerpo + cabeza
 char occupiedCoords[4] = {0x77, 0x76, 0x75, 0x74};// posiciones inciales
 bool snakedead = 1;
 char coordApple;
+bool optionMM = 0;
+char data = 0; //utilizado para la lectura de uart en el controlador
+
+void mainMenu() {
+  lcdClear(BLACK);
+  LCD_Bitmap(0, 20, 320, 52, logo);
+  LCD_Bitmap(42, 142, 90, 24, start);
+  LCD_Bitmap(173, 142, 126, 24, options);
+
+  paintArrow();
+
+  while(1) {
+    receiveController();
+    if (data == 1 || data == 3) optionMM++;
+    paintArrow();
+    
+  }
+}
+
+
+
+void paintArrow() { //Funcion para colocar el arrow que indica que opcion se ha seleccionado en el menu principal
+  if (optionMM = 0) {
+    LCD_Bitmap(75, 168, 21, 15, arrow);
+    FillRect(224, 168, 21, 15, BLACK);
+  }
+  else {
+    LCD_Bitmap(224, 168, 21, 15, arrow);
+    FillRect(75, 168, 21, 15, BLACK);
+  } 
+}
 
 void game() {
+  //dibujar pantalla de juego
   lcdClear(sGREY);
   FillRect(0, 0, 240, 240, sDARKGREEN);
   FillRect(24, 24, 192, 192, sLIGHTGREEN);
+
+  //Dibujar snake y manzana
   direction = 0; //hacia la derecha
   coordHead = 0x77; //centro de la escena
   snake_length = 3;
@@ -62,15 +88,37 @@ void game() {
 
   while (1) {
     if (snakedead == 0) snakeMove();
-    //digitalWrite(30, HIGH);
   }
   
   
 }
 
   bool inmove = 0;
+ 
+
   
 void snakeMove() {
+   receiveController();
+
+ switch (data) {
+  case 1: 
+  if (direction != 2) direction = 0;
+  break;
+  case 2: 
+  if (direction != 3) direction = 1;
+  break;
+  case 4:
+  if (direction != 0) direction = 2;
+  break;
+  case 8: 
+  if (direction != 1) direction = 3;
+  break;
+  default: 
+  direction = direction;
+  break;
+ } 
+  
+  
   bool newApple = 0;
   inmove = 0;
   delay(300);
@@ -163,7 +211,7 @@ void paintTile(unsigned char coord) { //funcion para pintar sobre algo con el fo
   FillRect(coordToLcdX(coord), coordToLcdY(coord), 12, 12, sLIGHTGREEN);
 }
 
-void paintApple() {
+void paintApple() { //funcion para colocar la manzana que el serpiente busca
   char coord = rand() % 0xFF;
   for (int i = 1; i <= snake_length; i++) {
     if (coord == occupiedCoords[i]) coord = rand() % 0xFF;
@@ -187,20 +235,9 @@ void paintScore() {
   LCD_Sprite(288, 96, 24, 24, numbers, 10, ones, 0, 0);
 }
 
-void right() {if ((direction != 2) && (inmove == 0)) 
-{direction = 0;
-inmove = 1;}}
-void up() {if ((direction != 3) && (inmove == 0)) 
-{direction = 1;
-inmove = 1;}}
-void left() {if ((direction != 0) && (inmove == 0)) 
-{direction = 2;
-inmove = 1;}}
-void down() {if ((direction != 1) && (inmove == 0)) 
-{direction = 3;
-inmove = 1;}}
-
-
+void receiveController() { //recibir datos del control utilizando uart
+if (Serial2.available()) data = Serial2.read();
+    Serial.println(data, BIN);}
 
 void loop() {
 
