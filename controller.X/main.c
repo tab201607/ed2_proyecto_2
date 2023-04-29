@@ -72,7 +72,7 @@ void main(void) {
     char datastreamtemp = (right + (up * 2) + (left * 4) + (down * 8) + (button * 16));
     
     
-    if (datastreamtemp != datastream && datastreamtemp != 0) {
+    if ((datastreamtemp != datastream) && (datastreamtemp != 0)) {
         UARTSendChar(datastreamtemp);
     }
     datastream = datastreamtemp;

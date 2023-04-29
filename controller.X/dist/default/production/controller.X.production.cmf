@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+$C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 idloc IDLOC 5 2000 2000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
@@ -83,19 +83,19 @@ STRING 2F5-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\controller.X.production.o
-F cinit CODE >823:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-F cinit CODE >826:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-F cinit CODE >876:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-14 cinit CODE >877:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-15 cinit CODE >878:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1A cinit CODE >879:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1B cinit CODE >883:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1C cinit CODE >884:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1D cinit CODE >885:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1E cinit CODE >888:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1F cinit CODE >894:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-1F cinit CODE >896:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
-20 cinit CODE >897:C:\Users\kirby\AppData\Local\Temp\xcAs3mc.s
+F cinit CODE >823:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+F cinit CODE >826:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+F cinit CODE >876:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+14 cinit CODE >877:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+15 cinit CODE >878:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1A cinit CODE >879:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1B cinit CODE >883:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1C cinit CODE >884:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1D cinit CODE >885:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1E cinit CODE >888:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1F cinit CODE >894:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+1F cinit CODE >896:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
+20 cinit CODE >897:C:\Users\kirby\AppData\Local\Temp\xcAsga8.s
 4 intentry CODE >83:C:\Users\kirby\Documents\University Stuff\2023S1\Electronica Digital 2\Proyecto 2\Code\controller.X\main.c
 2EC text11 CODE >62:C:\Users\kirby\Documents\University Stuff\2023S1\Electronica Digital 2\Proyecto 2\Code\controller.X\uart.c
 2EC text11 CODE >63:C:\Users\kirby\Documents\University Stuff\2023S1\Electronica Digital 2\Proyecto 2\Code\controller.X\uart.c
@@ -331,23 +331,23 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _up 3D4 -356 COMMON 1 bitbssCOMMON dist/default/production\controller.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _RCIF 65 0 ABS 0 - dist/default/production\controller.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+___sp 0 0 STACK 2 stack C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 _down 3D2 -356 COMMON 1 bitbssCOMMON dist/default/production\controller.X.production.o
 _left 3D1 -356 COMMON 1 bitbssCOMMON dist/default/production\controller.X.production.o
 _main 46 0 CODE 0 maintext dist/default/production\controller.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\controller.X.production.o
-start 18 0 CODE 0 init C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+start 18 0 CODE 0 init C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 _adc_channel 1F4 0 CODE 0 text2 dist/default/production\controller.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 __pbitbssCOMMON 3D0 -356 COMMON 1 bitbssCOMMON dist/default/production\controller.X.production.o
 _UARTDataReady 5D8 0 CODE 0 text11 dist/default/production\controller.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 wtemp0 7E 0 ABS 0 - dist/default/production\controller.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
@@ -356,8 +356,8 @@ _ANSELH 189 0 ABS 0 - dist/default/production\controller.X.production.o
 __end_of_adc_RO 576 0 CODE 0 text3 dist/default/production\controller.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of___lldiv 4D4 0 CODE 0 text8 dist/default/production\controller.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
-___stacklo 0 0 ABS 0 - C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+___stackhi 0 0 ABS 0 - C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
+___stacklo 0 0 ABS 0 - C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 ___lldiv@counter 78 0 COMMON 1 cstackCOMMON dist/default/production\controller.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\controller.X.production.o
 _OSCCON 8F 0 ABS 0 - dist/default/production\controller.X.production.o
@@ -367,7 +367,7 @@ _TRISEbits 89 0 ABS 0 - dist/default/production\controller.X.production.o
 ___lldiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\controller.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\controller.X.production.o
 __end_of_UARTDataReady 5E6 0 CODE 0 text11 dist/default/production\controller.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+___int_sp 0 0 STACK 2 stack C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -422,7 +422,7 @@ __end_of_Isr 552 0 CODE 0 text9 dist/default/production\controller.X.production.
 __end_of_adc_output 5D8 0 CODE 0 text5 dist/default/production\controller.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\controller.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\kirby\AppData\Local\Temp\xcAs3mc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kirby\AppData\Local\Temp\xcAsga8.o
 __pdataBANK0 36 0 BANK0 1 dataBANK0 dist/default/production\controller.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\controller.X.production.o

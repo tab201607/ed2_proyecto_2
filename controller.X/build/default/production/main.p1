@@ -484,7 +484,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _datastreamtemp `uc ~T0 @X0 1 a ]
 [e = _datastreamtemp -> + + + + -> _right `i * -> _up `i -> 2 `i * -> _left `i -> 4 `i * -> _down `i -> 8 `i * -> _button `i -> 16 `i `uc ]
 "75
-[; ;main.c: 75:     if (datastreamtemp != datastream && datastreamtemp != 0) {
+[; ;main.c: 75:     if ((datastreamtemp != datastream) && (datastreamtemp != 0)) {
 [e $ ! && != -> _datastreamtemp `i -> _datastream `i != -> _datastreamtemp `i -> 0 `i 150  ]
 {
 "76
